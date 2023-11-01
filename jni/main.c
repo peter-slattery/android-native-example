@@ -6,6 +6,7 @@
 #include <android/log.h>
 #include <android/asset_manager.h>
 #include <android_native_app_glue.h>
+#include <string.h>
 
 #define LOG(...) ((void)__android_log_print(ANDROID_LOG_INFO, "NativeExample", __VA_ARGS__))
 
@@ -229,7 +230,7 @@ static void engine_handle_cmd(struct android_app* app, int32_t cmd)
         case APP_CMD_TERM_WINDOW:
             engine_term_display(engine);
             break;
-        
+
         case APP_CMD_GAINED_FOCUS:
             engine->active = 1;
             break;
@@ -243,7 +244,6 @@ static void engine_handle_cmd(struct android_app* app, int32_t cmd)
 
 void android_main(struct android_app* state)
 {
-    app_dummy();
 
     struct engine engine;
     memset(&engine, 0, sizeof(engine));

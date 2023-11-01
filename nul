@@ -1,0 +1,5 @@
+jar signed.
+
+Warning: 
+The signer's certificate is self-signed.
+POSIX file permission and/or symlink attributes detected. These attributes are ignored when signing and are not protected by the signature.
